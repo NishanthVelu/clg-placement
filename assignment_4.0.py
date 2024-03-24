@@ -124,3 +124,5 @@ print(f"{std_3.name} got {std_3.mark()} Grade and was awarded with {std_3.award(
 
 
 
+
+
