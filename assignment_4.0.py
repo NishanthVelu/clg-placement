@@ -90,10 +90,11 @@ adimission_system.process_admission("Freedom Concept School", eligibility_age)
 
 class Grade10:
 
-    def __init__(self,name,free_kid,grade):
+    def __init__(self,name,free_kid,grade,award):
         self.name = name
         self.free_kid = free_kid
         self.grade = grade
+        self.award = award
 
     def mark(self):
         if self.grade >= 90 and self.grade <= 100:
@@ -118,13 +119,13 @@ class Grade10:
         
     
 
-std_1 = Grade10("Ziyan",10,91)
-std_2 = Grade10("Ziya",10,56)
-std_3 = Grade10("Ram",10,76)
+std_1 = Grade10("Ziyan",10,91,"Gold Medal")
+std_2 = Grade10("Ziya",10,56,"Bronze Medal")
+std_3 = Grade10("Ram",10,76,"Silver Medal")
 
-print(f"{std_1.name} got {std_1.mark()} Grade and was awarded with {std_1.award()}.")
-print(f"{std_2.name} got {std_2.mark()} Grade and was awarded with {std_2.award()}.")
-print(f"{std_3.name} got {std_3.mark()} Grade and was awarded with {std_3.award()}.")
+print(f"{std_1.name} got {std_1.mark()} Grade and was awarded with {std_1.award}.")
+print(f"{std_2.name} got {std_2.mark()} Grade and was awarded with {std_2.award}.")
+print(f"{std_3.name} got {std_3.mark()} Grade and was awarded with {std_3.award}.")
 
 
 
