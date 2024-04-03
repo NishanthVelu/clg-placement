@@ -61,6 +61,7 @@ class SchoolSystem:
             if eligible_students:
                 eligible_students.append(student_name)
 
+
         print(f"Eligible students for {school_name}: {','.join(eligible_students)}")
 
         if eligible_students:
@@ -118,13 +119,13 @@ class Grade10:
         
     
 
-std_1 = Grade10("Ziyan",10,91,"First Class")
-std_2 = Grade10("Ziya",10,56,"none")
-std_3 = Grade10("Ram",10,76,"Second Class")
+std_1 = Grade10("Ziyan",10,91)
+std_2 = Grade10("Ziya",10,56)
+std_3 = Grade10("Ram",10,76)
 
-print(f"{std_1.name} got {std_1.mark()} Grade and was awarded with ,{std_1.award}.")
-print(f"{std_2.name} got {std_2.mark()} Grade and was awarded with ,{std_2.award}.")
-print(f"{std_3.name} got {std_3.mark()} Grade and was awarded with ,{std_3.award}.")
+print(f"{std_1.name} got {std_1.mark()} Grade and was awarded with {std_1.award()}.")
+print(f"{std_2.name} got {std_2.mark()} Grade and was awarded with {std_2.award()}.")
+print(f"{std_3.name} got {std_3.mark()} Grade and was awarded with {std_3.award()}.")
 
 
 
@@ -171,12 +172,12 @@ class Placement:
         else:
             return False
         
-class Placementsystem:
-    def __init__(self):
-        self.students = {}
-        self.placed_students = []
-        self.rejected_students = []
-        self.students_on_hold = []  
+    class Placementsystem:
+        def __init__(self):
+            self.students = {}
+            self.placed_students = []
+            self.rejected_students = []
+            self.students_on_hold = []  
                
     def add_student(self,student):
         self.students[student.name] = student
@@ -213,6 +214,7 @@ Placement_System.register_student_for_placement(stud_3)
 company_criteria = {"cgpa_criteria": 7.5, "attendence_criteria": 75}
 
 Placement_System.process_placement("XYZ tech", company_criteria)
+
 
 
           
