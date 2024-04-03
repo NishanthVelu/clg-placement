@@ -58,7 +58,7 @@ class SchoolSystem:
     def process_admission(self,school_name,eligibility):
         eligible_students = []
         for student_name, student in self.students.items():
-            if eligible_students.can_appear_for_admission(eligibility):
+            if eligible_students:
                 eligible_students.append(student_name)
 
         print(f"Eligible students for {school_name}: {','.join(eligible_students)}")
@@ -170,24 +170,25 @@ class Placement:
         else:
             return False
         
-    class Placementsystem:
-        def __init__(self):
-            self.students = {}
-            self.placed_students = []
-            self.rejected_students = []
-            self.students_on_hold = []  
+class Placementsystem:
+    def __init__(self):
+        self.students = {}
+        self.placed_students = []
+        self.rejected_students = []
+        self.students_on_hold = []  
                
-        def add_student(self,student):
-            self.students[student.name] = student
+    def add_student(self,student):
+        self.students[student.name] = student
 
-        def register_student_for_placement(self,student):
-            self.add_student(student)
+    def register_student_for_placement(self,student):
+        self.add_student(student)
 
-        def process_placement(self,company_name,criteria):
-            eligible_students = []
-            for student_name, student in self.students_items():
-                if eligible_students.can_appear_for_interview(student_name): 
-                    eligible_students.append(student_name)
+    def process_placement(self,company_name,criteria):
+
+        eligible_students = []
+        for student_name, student in self.students.items():
+            if eligible_students(criteria): 
+                eligible_students.append(student_name)
 
             print(f"Eligible student for {company_name}: {','.join(eligible_students)}")
 
