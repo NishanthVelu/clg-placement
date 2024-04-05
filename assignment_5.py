@@ -9,7 +9,7 @@ class Travelling:
         self.accomodation = accomodation
         self.budget = budget
 
-    def PlanTrip(self):
+    def plan_trip(self):
         print("Planning bike trip to:",self.destination)
         print("1. route:",self.route)
         print("2. accomodation:",self.accomodation)
@@ -23,19 +23,20 @@ accomodation = "campimg along the way"
 budget = "The estimated budget for the trip is 4 lakhs"
 
 TripPlan = Travelling(destination, route, SaftyGears, accomodation, budget)
-TripPlan.PlanTrip()
+TripPlan.plan_trip()
 
 
 
 class Destinations():
+     
     def __init__(self,staring_point):
         self.stating_point = staring_point
         self.destinations = []
 
-    def AddDestination(self,destination):
+    def add_destination(self,destination):
         self.destinations.append(destination)
 
-    def StartTrip(self):
+    def start_trip(self):
         print("Staring bike trip from", self.stating_point)
 
         for i in range(len(self.destinations) - 1):
@@ -44,18 +45,18 @@ class Destinations():
 
 
 trip = Destinations("Vellore")
-trip.AddDestination("Kerala")
-trip.AddDestination("Karnataka")
-trip.AddDestination("Andhra Pradesh")
-trip.AddDestination("Odisha")
-trip.AddDestination("West Bengal")
-trip.AddDestination("Uttar Pradesh")
-trip.AddDestination("Rajasthan")
-trip.AddDestination("Delhi")
-trip.AddDestination("Jammu Kashmir")
-trip.AddDestination("Ladakh")
+trip.add_destination("Kerala")
+trip.add_destination("Karnataka")
+trip.add_destination("Andhra Pradesh")
+trip.add_destination("Odisha")
+trip.add_destination("West Bengal")
+trip.add_destination("Uttar Pradesh")
+trip.add_destination("Rajasthan")
+trip.add_destination("Delhi")
+trip.add_destination("Jammu Kashmir")
+trip.add_destination("Ladakh")
 
-trip.StartTrip()
+trip.start_trip()
 
 
 
@@ -74,7 +75,7 @@ def finf_name():
 
 
 
-class plan_1:
+class Plan1:
 
     def __init__(self):
         self.starting_point = ""
@@ -102,7 +103,7 @@ class plan_1:
         for i, activity in enumerate(self.activities, 1):
             print(f"{i}. {activity}")
 
-trip = plan_1()
+trip = Plan1()
 trip.set_starting_point("Vellore")
 trip.set_destination_1("Kerala")
 trip.set_duration("4 days")
@@ -115,7 +116,7 @@ trip.plan_trip()
 
 
 
-class Heading_Destination_1:
+class HeadingDestination1:
     def __init__(self,rooms,price,rating):
         self.rooms = rooms
         self.price = price
@@ -124,7 +125,7 @@ class Heading_Destination_1:
 
     print("Came to Kerala and make the planned activities quick and safe")
 
-    def Room_Stay(self):
+    def room_stay(self):
         if self.price <= 500 and self.rating >= 4.5:
             return "Affordable and book it."
         
@@ -134,21 +135,21 @@ class Heading_Destination_1:
         else:
             return "Not suitable for stay"
 
-room1 = Heading_Destination_1("Abc rooms",490,4.6)
-room2 = Heading_Destination_1("Cdf rooms",700,3)
+room1 = HeadingDestination1("Abc rooms",490,4.6)
+room2 = HeadingDestination1("Cdf rooms",700,3)
 
-print("room 1:", room1.Room_Stay())
-print("Room 2:", room2.Room_Stay())
+print("room 1:", room1.room_stay())
+print("Room 2:", room2.room_stay())
 
         
 
-class D_1_Activities():
+class D1Activities():
 
     def __init__(self, weather):
         self.weather = weather
         
 
-    def Choose_Activities(self):
+    def choose_activities(self):
         activities = []
 
         if self.weather == "sunny":
@@ -162,9 +163,9 @@ class D_1_Activities():
 
         return activities
     
-plan = D_1_Activities("sunny")
+plan = D1Activities("sunny")
 
-print("Activities for sunny weather :", plan.Choose_Activities())
+print("Activities for sunny weather :", plan.choose_activities())
 
 
 
