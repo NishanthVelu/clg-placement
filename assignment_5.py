@@ -2,10 +2,10 @@
 
 class Travelling:
      
-    def __init__(self,destination,route,SaftyGears,accomodation,budget):
+    def __init__(self,destination,route,safty_gears,accomodation,budget):
         self.destination = destination
         self.route = route
-        self.SaftyGears = SaftyGears
+        self.safty_gears = safty_gears
         self.accomodation = accomodation
         self.budget = budget
 
