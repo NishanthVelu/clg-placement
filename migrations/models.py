@@ -47,7 +47,7 @@ class Match(models.Model):
                 )
                 yield match
 
-#  example:
+#  example
 matches = Match.load_from_csv('league.csv')
 Match.objects.bulk_create(matches)
                 
