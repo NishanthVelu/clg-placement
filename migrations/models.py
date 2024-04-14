@@ -66,4 +66,4 @@ with open(filename, 'w' , newline='') as csvfile:
 
 print(f"Data has been added to {filename}")
 
-#djando read and write
+#djando read and write with csv file
